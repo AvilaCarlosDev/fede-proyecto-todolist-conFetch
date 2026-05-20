@@ -117,7 +117,7 @@ const Home = () => {
 					<p>No hay tareas</p>
 				) : (
 					<ul className="list-group">
-						{tasks.map(task => <li className="list-group-item d-flex justify-content-between align-items-center">
+						{tasks.map(task => <li key={task.id} className="list-group-item d-flex justify-content-between align-items-center">
 							{task.label}<button className="btn btn-danger" onClick={() => deleteTask(task.id)} >Eliminar</button>
 						</li>)}
 					</ul>)}
